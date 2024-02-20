@@ -1,0 +1,32 @@
+{
+    "blogs" : [
+        {
+            "title": "Things about Programming",
+            "author": "John",
+            "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vitae nibh eu magna commodo ultrices. Curabitur porttitor tristique ante, cursus egestas risus euismod non. Nullam a enim ut turpis laoreet ultricies id eget arcu. Quisque sit amet lorem ex.",
+            "id": "0"
+        }
+
+        ,{
+            "title": "React and Bootstrap",
+            "author": "Mary",
+            "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vitae nibh eu magna commodo ultrices. Curabitur porttitor tristique ante, cursus egestas risus euismod non. Nullam a enim ut turpis laoreet ultricies id eget arcu. Quisque sit amet lorem ex.",
+            "id": "1"
+        }
+
+        ,{
+            "title": "Things about React js",
+            "author": "James",
+            "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vitae nibh eu magna commodo ultrices. Curabitur porttitor tristique ante, cursus egestas risus euismod non. Nullam a enim ut turpis laoreet ultricies id eget arcu. Quisque sit amet lorem ex.",
+            "id": "2"
+        }
+
+        ,{
+            "title": "Learning React Crash Course",
+            "author": "Peter",
+            "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vitae nibh eu magna commodo ultrices. Curabitur porttitor tristique ante, cursus egestas risus euismod non. Nullam a enim ut turpis laoreet ultricies id eget arcu. Quisque sit amet lorem ex.",
+            "id": "3"
+        }
+    ]
+
+}

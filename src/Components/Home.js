@@ -3,29 +3,34 @@ import axios from 'axios';
 import BlogList from './BlogList';
 
 const Blog = () => {
-  const [blogs, setBlogs] = useState(null);
+  const [data, setData] = useState([]);
   
 
     useEffect(() => {
         axios.get('http://localhost:4000/blogs')
-        .then(res =>{setBlogs(res.data)});
-    })
+        .then(res =>
+          {setData(res.data)})
+          .catch(err => {
+          console.error("Error!", err);
+            })
+      }, [])
+
 
 
   
 
 
     return (
-        <div>
+        <div className = 'home'>
           {
-            blogs && <BlogList blogs = {blogs}/>
+            data.length > 0 ? <BlogList blogs = {data}/> : <p>Loading...</p>
           }
           
         
         </div>
       
     
-  );
+  )
 }
 
 export default Blog;

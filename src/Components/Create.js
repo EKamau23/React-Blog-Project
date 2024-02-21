@@ -47,7 +47,7 @@ function Create() {
     // Make a POST request using axios with the updated data
 
     
-    axios.post('http://localhost:3000/blogs', newData)
+    axios.post('http://localhost:4000/blogs', newData)
 
       .then(response => {
         console.log(response.data);

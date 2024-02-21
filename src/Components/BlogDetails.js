@@ -1,39 +1,39 @@
-import { useParams } from "react-router-dom";
-import useFetch from "./useFetch";
-import { button } from "react-bootstrap";
+import { useParams  } from "react-router-dom";
+import React from "react";
+import  useFetch  from "./useFetch";
+import  {Button}  from "react-bootstrap";
 import { useHistory } from "react-router-dom";
 import axios from "axios";
 
 const BlogDetails = () => {
     const {id} = useParams()
-    const {data:blogs} = useFetch('http://localhost:3000/blogs' + id);
+    const blog = useFetch('http://localhost:4000/blogs/'+ id);
     const history = useHistory();
 
-    const handleDelete = (e) => {
+    const handleDelete = (e) =>{
         e.preventDefault()
 
-        axios.delete('http://localhost:3000/blogs' + id)
-        .then(res => {
+        axios.delete('http://localhost:4000/blogs/'+ id)
+        .then(res =>{
             alert("blog deleted");
             history.push('/');
-        }   )
-    };
+        })
+    }
 
     return(
         <div className="details">
 
-            {blogs && (
+            {blog && (
                 <article>
-                    <h3>{blogs.title}</h3>
-                    <p>Done by: {blogs.author}</p>
-                    <div>{blogs.body}</div>
-                    <button onClick={handleDelete} variant="danger" className="mt-3" type="submit">Delete Blog</button>
+                    <h3>{blog.title}</h3>
+                    <p>Done by: {blog.author}</p>
+                    <div>{blog.body}</div>
+                    <Button onClick={handleDelete} variant="danger" className="mt-3" type="submit">Delete Blog</Button>
                 </article>
             )
             }
-
         </div>
     );
-};
+}
 
 export default BlogDetails;

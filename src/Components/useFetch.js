@@ -1,18 +1,37 @@
+// import { useState, useEffect } from "react";
+// import axios from "axios";
+
+// const useFetch = (url) => {
+//     const [data, setData] = useState(null);
+
+//     useEffect (() => {
+//         axios.get(url)
+//         .then(res => (setData(res.data)))
+
+//         .catch(err => console.log(err))
+//     }, [url]);
+
+//     return(data);
+// }
+
+// export default useFetch;
+
 import { useState, useEffect } from "react";
 import axios from "axios";
 
 const useFetch = (url) => {
-    const [blogs, setBlogs] = useState(null);
+    const [data, setData] = useState([]);
 
     useEffect (() => {
         axios.get(url)
-        .then(res => (setBlogs(res.data)))
+        .then(res => (setData(res.data)))
 
         .catch(err => console.log(err))
     }, [url]);
 
-    return(blogs);
+    return(data);
 }
 
 export default useFetch;
+
 
